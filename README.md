@@ -12,14 +12,14 @@ On Ubuntu, run:<br />
 `sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.9 1`.<br />
 `sudo apt-get install -y libc++-dev libc++abi-dev libtbb-dev`.<br />
 
-2. Install cmake
+2. Install cmake, run:<br />
 `wget https://cmake.org/files/v3.9/cmake-3.9.4-Linux-x86_64.tar.gz`.<br />
 `tar xvzf cmake-3.9.4-Linux-x86_64.tar.gz`.<br />
 `mv cmake-3.9.4-Linux-x86_64 /usr/bin/cmake`.<br />
 `export PATH=$PATH:/usr/bin/cmake/bin`.<br />
 `rm cmake-3.9.4-Linux-x86_64.tar.gz`.<br />
 
-3. Install protobuf: after cloning the protobuf repo, run
+3. Install protobuf: after cloning the protobuf repo, run:<br />
 `./autogen.sh`.<br />
 `./configure CXX=clang++ CXXFLAGS='-std=c++11 -stdlib=libc++ -O3 -g'`.<br />
 `make`.<br />
@@ -27,10 +27,9 @@ On Ubuntu, run:<br />
 `sudo make install`.<br />
 `ldconfig`.<br />
 
-4. Build KVS
+4. Build KVS, run:<br />
 `bash scripts/build_release.sh`.<br />
-
-(This command will build a KVS that provides last-writer-win consistency. Lattice composition of other consistency levels can be found in `./kvs/include`)
+(This command will build a KVS that provides last-writer-win consistency. Lattice composition for other consistency levels can be found in `kvs/include`)
 
 ## IP Configuration:
 For each server node:
