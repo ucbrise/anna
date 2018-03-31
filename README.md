@@ -29,7 +29,7 @@ On Ubuntu, run:<br />
 
 4. Build KVS, run:<br />
 `bash scripts/build_release.sh`.<br />
-(This command will build a KVS that provides last-writer-win consistency. Lattice composition of other consistency levels can be found in `./kvs/include`)
+(This command will build a KVS that provides last-writer-win consistency. Lattice composition for other consistency levels can be found in `kvs/include`)
 
 ## IP Configuration:
 For each server node:
