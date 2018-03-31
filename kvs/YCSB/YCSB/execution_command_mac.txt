@@ -1,0 +1,1 @@
+java -cp core/target/core-0.11.0-SNAPSHOT.jar:latticedb/target/latticedb-binding-0.11.0-SNAPSHOT.jar:latticedb/target/dependency/jzmq-3.1.0.jar:latticedb/target/dependency/protobuf-java-3.0.0-beta-3.jar -Djava.library.path=/usr/local/lib com.yahoo.ycsb.Client -load -db com.yahoo.ycsb.db.LatticedbClient -P workloads/workloada -s
