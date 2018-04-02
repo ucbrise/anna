@@ -45,9 +45,9 @@ For each user/benchmark node:
 2. The ip of all the proxy nodes should be stored in `conf/user/proxy_address.txt`. Each line contains a single proxy ip.
 
 ## Run Instruction:
-
-1. Start a server by running `./build/kvs/kvs_server`.
-2. Start a proxy by running `./build/kvs/kvs_proxy`.
+Please start the proxy first, and then the server and client.
+1. Start a proxy by running `./build/kvs/kvs_proxy`.
+2. Start a server by running `./build/kvs/kvs_server`.
 3. Start a client by running `./build/kvs/kvs_user`.
 
 The accepted input formats are `GET $key` and `PUT $key $value`.
