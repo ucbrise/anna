@@ -2,10 +2,9 @@
 
 Anna is an in-memory KVS that delivers high performance at multiple scales, from a single core machine to NUMA to geo-distributed deployment. It also provides a wide spectrum of coordination-free isolation levels that aim to meet the consistency requirements of different applications.
 
-## Build Instruction:
+## Build Instruction (Ubuntu):
 
-1. Install dependencies, Clang and libc++.
-On Ubuntu, run:<br />
+1. Install Clang and libc++, run:<br />
 `sudo apt-get update`.<br />
 `sudo apt-get install -y build-essential autoconf automake libtool curl make g++ unzip pkg-config wget clang-3.9`.<br />
 `sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.9 1`.<br />
