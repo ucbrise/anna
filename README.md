@@ -1,5 +1,8 @@
 # Anna: A KVS for any scale
 
+Note: This is a snapshot of the Anna codebase as of March, 2018.
+The latest codebase is released and maintained here (https://github.com/fluent-project/fluent).
+
 Anna is an in-memory KVS that delivers high performance at multiple scales, from a single core machine to NUMA to geo-distributed deployment. It also provides a wide spectrum of coordination-free isolation levels that aim to meet the consistency requirements of different applications.
 
 ## Build Instruction (Ubuntu):
