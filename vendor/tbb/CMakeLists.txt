@@ -12,10 +12,23 @@ ExternalProject_Add(tbb
     INSTALL_COMMAND ""
 )
 
+
+set(RENAMETBB "rename.x.y.z_release.to.tbb_release")
+add_custom_command(OUTPUT  ${RENAMETBB}
+  COMMAND  echo "I move " 
+  COMMAND  ls ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build | grep _release
+  COMMAND  rm  ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/tbb_release -rf
+  COMMAND  mv ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/*_release   ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/tbb_release
+  COMMAND  echo to
+  COMMAND   ls ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build | grep _release
+  COMMENT  "rename tbb build dir see @issue https://github.com/ucbrise/anna/issues/4"
+ )
+add_custom_target(T1 ALL DEPENDS ${RENAMETBB})
+
 set(TBB_INCLUDE_DIRS ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/include PARENT_SCOPE)
 set(TBB_LINK_DIRS
-  ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/linux_intel64_clang_cc4.8_libc2.19_kernel3.13.0_release
+  ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/tbb_release
   PARENT_SCOPE)
 set(TBB_LIBRARIES
-  ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/linux_intel64_clang_cc4.8_libc2.19_kernel3.13.0_release/libtbb.so
+  ${CMAKE_CURRENT_BINARY_DIR}/src/tbb/build/tbb_release/libtbb.so
   PARENT_SCOPE)
