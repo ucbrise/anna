@@ -29,7 +29,7 @@ LICENSE file.
   <name>Accumulo DB Binding</name>
   <properties>
     <!-- This should match up to the one from your Accumulo version -->
-    <hadoop.version>2.2.0</hadoop.version>
+    <hadoop.version>3.2.3</hadoop.version>
   </properties>
   <dependencies>
     <dependency>
